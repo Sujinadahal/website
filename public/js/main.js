@@ -52,15 +52,23 @@ document.addEventListener('DOMContentLoaded', function () {
   // Dynamic testimonials block (fetched from /api/testimonials)
   var tContainer = document.getElementById('testimonials-list');
   if (tContainer) {
+    var emptyMessage = tContainer.getAttribute('data-empty-message') || 'Testimonials will appear here once available.';
     fetch('/api/testimonials')
       .then(function (r) { return r.json(); })
       .then(function (items) {
-        tContainer.innerHTML = items.map(function (t) {
+        var real = (items || []).filter(function (t) {
+          return t && t.quote && t.name && t.name.toLowerCase() !== 'name';
+        });
+        if (!real.length) {
+          tContainer.innerHTML = '<p class="quote-note">' + emptyMessage + '</p>';
+          return;
+        }
+        tContainer.innerHTML = real.map(function (t) {
           return '<div class="quote-card"><p>"' + t.quote + '"</p><cite>— ' + t.name + ', ' + t.role + '</cite></div>';
         }).join('');
       })
       .catch(function () {
-        tContainer.innerHTML = '<p>Testimonials will appear here once available.</p>';
+        tContainer.innerHTML = '<p class="quote-note">' + emptyMessage + '</p>';
       });
   }
 });

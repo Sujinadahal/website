@@ -4,14 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — Sujina Dahal</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <%- include('partials/nav') %>
 <div class="notfound wrap">
-  <h1>Page not found</h1>
-  <p class="lede" style="margin:16px auto;">The page you're looking for doesn't exist. Head back to the homepage.</p>
-  <a href="/" class="btn btn-primary">Back to Home</a>
+  <div class="eyebrow" style="justify-content:center; display:flex;">404</div>
+  <h1>This page couldn't be found.</h1>
+  <p class="lede" style="margin:16px auto;">Looking for my work? Explore the portfolio, or head back to the homepage.</p>
+  <div class="cta-row" style="justify-content:center;">
+    <a href="/" class="btn btn-primary">Back to Home</a>
+    <a href="/work" class="btn btn-ghost">See My Work</a>
+  </div>
 </div>
 <%- include('partials/footer') %>
 </body>

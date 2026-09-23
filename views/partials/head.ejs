@@ -1,7 +1,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><%= title %></title>
+<meta name="description" content="<%= typeof description !== 'undefined' ? description : site.defaultDescription %>">
+<link rel="canonical" href="<%= site.url + site.currentPath %>">
+<meta name="theme-color" content="#1B3A5C">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Sujina Dahal">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sujina Dahal">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:description" content="<%= typeof description !== 'undefined' ? description : site.defaultDescription %>">
+<meta property="og:url" content="<%= site.url + site.currentPath %>">
+<meta property="og:image" content="<%= site.url %>/images/social-preview.jpg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= title %>">
+<meta name="twitter:description" content="<%= typeof description !== 'undefined' ? description : site.defaultDescription %>">
+<meta name="twitter:image" content="<%= site.url %>/images/social-preview.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sujina Dahal",
+  "url": "<%= site.url %>",
+  "jobTitle": "Civic Technology Entrepreneur & Researcher",
+  "worksFor": { "@type": "Organization", "name": "Prashasan Pro" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Pokhara", "addressCountry": "NP" },
+  "sameAs": [
+    "https://linkedin.com/in/sujinadahal"
+  ],
+  "knowsAbout": ["Civic Technology", "Digital Inclusion", "Public Policy Research", "Youth Leadership"]
+}
+</script>

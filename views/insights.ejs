@@ -16,12 +16,13 @@
 
 <section>
   <div class="wrap">
+    <div class="num">In Progress</div>
     <ul class="post-list">
-      <% posts.forEach(function(p){ %>
-        <li><%= p.title %> <span><%= p.status %></span></li>
+      <% posts.slice(0, 4).forEach(function(p){ %>
+        <li><%= p.title %></li>
       <% }); %>
     </ul>
-    <p class="form-note" style="margin-top:24px;">Posts are served from <code>data/insights.json</code> — add a <code>content</code> field and a matching route/view per post when articles are ready to publish.</p>
+    <p class="form-note" style="margin-top:24px;">More essays are on the way — check back soon, or <a href="/contact">get in touch</a> if you'd like to be notified when the first one is published.</p>
   </div>
 </section>
 

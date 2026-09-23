@@ -23,6 +23,8 @@ app.use((req, res, next) => {
   res.locals.site = {
     name: 'Sujina Dahal',
     tagline: 'Technology. People. Public Good.',
+    url: process.env.SITE_URL || 'https://sujinadahal.com.np',
+    defaultDescription: 'Sujina Dahal is a civic-technology entrepreneur, researcher and youth-development professional from Nepal, working across digital public services, responsible AI, research and community programmes.',
     year: new Date().getFullYear(),
     nav: [
       { href: '/', label: 'Home' },
