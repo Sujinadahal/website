@@ -1,0 +1,11 @@
+<header class="site">
+  <nav class="wrap">
+    <a href="/" class="brand">Sujina Dahal <span>·</span></a>
+    <div class="navlinks" id="navlinks">
+      <% site.nav.forEach(function(item){ %>
+        <a href="<%= item.href %>" class="<%= site.currentPath === item.href ? 'active' : '' %>"><%= item.label %></a>
+      <% }); %>
+    </div>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>

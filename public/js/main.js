@@ -1,0 +1,66 @@
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.getElementById('navtoggle');
+  var links = document.getElementById('navlinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { links.classList.remove('open'); });
+    });
+  }
+
+  // Contact form — submits to the backend API instead of reloading the page
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var status = document.getElementById('form-status');
+      var payload = {
+        name: form.name.value,
+        email: form.email.value,
+        organization: form.organization.value,
+        topic: form.topic.value,
+        message: form.message.value
+      };
+      status.className = 'form-status';
+      status.textContent = 'Sending…';
+      status.style.display = 'block';
+      try {
+        var res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        var data = await res.json();
+        if (res.ok && data.ok) {
+          status.className = 'form-status ok';
+          status.textContent = data.message || 'Thank you — your message has been received.';
+          form.reset();
+        } else {
+          status.className = 'form-status err';
+          status.textContent = data.error || 'Something went wrong. Please try again.';
+        }
+      } catch (err) {
+        status.className = 'form-status err';
+        status.textContent = 'Could not reach the server. Please try again shortly.';
+      }
+    });
+  }
+
+  // Dynamic testimonials block (fetched from /api/testimonials)
+  var tContainer = document.getElementById('testimonials-list');
+  if (tContainer) {
+    fetch('/api/testimonials')
+      .then(function (r) { return r.json(); })
+      .then(function (items) {
+        tContainer.innerHTML = items.map(function (t) {
+          return '<div class="quote-card"><p>"' + t.quote + '"</p><cite>— ' + t.name + ', ' + t.role + '</cite></div>';
+        }).join('');
+      })
+      .catch(function () {
+        tContainer.innerHTML = '<p>Testimonials will appear here once available.</p>';
+      });
+  }
+});

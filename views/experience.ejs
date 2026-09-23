@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head') %>
+</head>
+<body>
+<%- include('partials/nav') %>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">PROFESSIONAL JOURNEY</div>
+    <h1>The Journey So Far.</h1>
+    <p class="lede">My journey has developed through civic technology, research, digital education, SDG coordination, banking, media, youth leadership and community service — each role strengthening the same core ability: connecting people, evidence and practical execution.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="tl">
+      <div class="tl-item"><div class="tl-period">2025 – Present</div><h3>Founder — Prashasan Pro</h3><p>Building a civic-technology platform to simplify citizenship, passport and administrative information; website live and app in development.</p></div>
+      <div class="tl-item"><div class="tl-period">Aug 2024 – Aug 2025</div><h3>Communication and Research Assistant — Pokhara Research Centre</h3><p>Managed communication, research and stakeholder coordination; improved engagement by 30%.</p></div>
+      <div class="tl-item"><div class="tl-period">Jun 2024 – Jun 2025</div><h3>Digital Literacy Trainer — Pokhara Youth Council</h3><p>Trained 2,000+ students in AI literacy, online safety and misinformation awareness.</p></div>
+      <div class="tl-item"><div class="tl-period">Jan 2024 – Jul 2024</div><h3>Banking Intern — Siddhartha Bank Ltd., Provincial Office</h3><p>Supported account-opening and loan-documentation processes for 500+ customer accounts.</p></div>
+      <div class="tl-item"><div class="tl-period">Aug 2023 – Dec 2023</div><h3>Media Presenter and Reporting Intern — Fewa Television</h3><p>Presented and reported 20+ community-focused stories.</p></div>
+      <div class="tl-item"><div class="tl-period">2023 – 2024</div><h3>Provincial Coordinator — UN Nepal, Gandaki Province</h3><p>Coordinated SDG outreach across 11 districts and compiled monthly M&amp;E reports.</p></div>
+      <div class="tl-item"><div class="tl-period">2023 – 2024</div><h3>SDG Advocacy Volunteer — UNV Nepal</h3><p>Facilitated SDG workshops and contributed monitoring data and success stories to UN reporting.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="num">Impact</div>
+    <div class="sec-head"><h2>Impact That Can Be Seen.</h2>
+    <p class="lede">Good civic and community work should be measured by what people learn, what becomes easier, who participates and whether systems become more responsive.</p></div>
+    <div class="impact-grid">
+      <% impact.forEach(function(i){ %>
+        <div class="impact-cell"><div class="fig"><%= i.figure %></div><div class="lbl"><%= i.label %></div></div>
+      <% }); %>
+    </div>
+    <div class="impact-note">Figures published only with supporting records; verify all metrics and dates before publishing.</div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

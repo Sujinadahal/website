@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head') %>
+</head>
+<body>
+<%- include('partials/nav') %>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">CONTACT</div>
+    <h1>Let's Build Public Value Together.</h1>
+    <p class="lede">Have a civic-tech idea, digital-literacy initiative, research project, youth programme or partnership opportunity? I would be glad to connect and explore how technology, evidence and community participation can create meaningful impact.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Get in Touch</h2>
+        <ul class="contact-list">
+          <li>Email — hello@sujinadahal.com.np</li>
+          <li>LinkedIn — linkedin.com/in/sujinadahal</li>
+          <li>Portfolio — sujinadahal.com.np</li>
+          <li>Pokhara, Nepal</li>
+        </ul>
+      </div>
+      <form id="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <input type="text" name="organization" placeholder="Organization">
+        <input type="text" name="topic" placeholder="What would you like to discuss?">
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn-primary" style="justify-self:start;">Start a Conversation</button>
+        <div id="form-status" class="form-status"></div>
+        <div class="form-note">Messages are saved by the backend to <code>data/messages.json</code>. Connect an email provider (e.g. Nodemailer + SMTP) in <code>routes/api.js</code> before going live.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

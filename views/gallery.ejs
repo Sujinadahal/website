@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head') %>
+</head>
+<body>
+<%- include('partials/nav') %>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">PHOTO GALLERY</div>
+    <h1>People, Projects and Progress</h1>
+    <p class="lede">A visual collection of the people, places and projects behind my work — civic technology, digital literacy, UN/SDG work, youth leadership, research and community service.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="gallery">
+      <figure><img src="/images/liberty-camp-session-4.jpg" alt="Liberty Camp session"><figcaption>Liberty Camp Nepal 2025 — youth entrepreneurship training</figcaption></figure>
+      <figure><img src="/images/liberty-camp-certificate.jpg" alt="Receiving a Liberty Camp certificate"><figcaption>Liberty Camp 2025 closing ceremony</figcaption></figure>
+      <figure><img src="/images/public-speaking-book.jpg" alt="Holding a public speaking book"><figcaption>Learning journey — public speaking &amp; confidence</figcaption></figure>
+      <figure><img src="/images/rotaract-district-conference-1.jpg" alt="Rotaract District Conference"><figcaption>15th Rotaract District Conference, Butwal</figcaption></figure>
+      <figure><img src="/images/rotary-carnival.jpg" alt="Rotary Carnival, Lakeside Pokhara"><figcaption>Community &amp; youth-network events, Pokhara</figcaption></figure>
+      <figure><img src="/images/rotaract-installation.jpg" alt="Rotaract installation ceremony"><figcaption>Rotaract Club of Pokhara Fishtail — installation ceremony</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="num">Testimonials</div>
+    <div class="sec-head"><h2>What Collaborators Say</h2>
+    <p class="lede">The strongest professional story is often confirmed by the people who have seen the work directly. Loaded live from the backend at <code>/api/testimonials</code>.</p></div>
+    <div id="testimonials-list">
+      <div class="quote-card"><p>Loading testimonials…</p></div>
+    </div>
+    <div class="quote-note">Placeholder pending 3–5 approved testimonials from supervisors, UN/SDG collaborators, research-centre colleagues, youth-programme partners or startup collaborators. Edit <code>data/testimonials.json</code> to update.</div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

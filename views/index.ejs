@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head') %>
+</head>
+<body>
+<%- include('partials/nav') %>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">CIVIC TECHNOLOGY · DIGITAL INCLUSION · PUBLIC IMPACT</div>
+      <h1>Making Public Services Easier Through Responsible Technology.</h1>
+      <p class="lede">I am a civic-technology entrepreneur, researcher and youth leader working at the intersection of digital innovation, public-service access and community impact. Through <strong>Prashasan Pro</strong>, I am building simpler, faster and more reliable access to information about citizenship, passport and related administrative procedures.</p>
+      <div class="cta-row">
+        <a href="/work" class="btn btn-primary">Explore My Work</a>
+        <a href="/contact" class="btn btn-ghost">Let's Collaborate</a>
+      </div>
+      <div class="micro">Based in Pokhara, Nepal · Working across civic technology, digital literacy, public policy and youth development</div>
+    </div>
+    <div class="hero-media">
+      <img src="/images/podium-speaking.jpg" alt="Sujina Dahal speaking at a podium during a formal programme">
+      <div class="hero-tag">Founder, Prashasan Pro — simplifying citizenship &amp; passport information for Nepali citizens.</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="num">Snapshot</div>
+    <div class="sec-head"><h2>Impact That Can Be Seen.</h2></div>
+    <div class="impact-grid">
+      <% impact.forEach(function(i){ %>
+        <div class="impact-cell"><div class="fig"><%= i.figure %></div><div class="lbl"><%= i.label %></div></div>
+      <% }); %>
+    </div>
+    <div class="cta-row" style="margin-top:32px;">
+      <a href="/experience" class="btn btn-ghost">See full impact &amp; journey</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num">Where I Work</div>
+    <div class="sec-head">
+      <h2>Civic Technology · Policy · Youth Leadership</h2>
+      <p class="lede">From Prashasan Pro to national digital-literacy training to SDG coordination across Gandaki Province — explore the full picture across the site.</p>
+    </div>
+    <div class="cta-row">
+      <a href="/about" class="btn btn-ghost">About</a>
+      <a href="/work" class="btn btn-ghost">Featured Work</a>
+      <a href="/leadership" class="btn btn-ghost">Leadership</a>
+      <a href="/gallery" class="btn btn-ghost">Gallery</a>
+      <a href="/insights" class="btn btn-ghost">Insights</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

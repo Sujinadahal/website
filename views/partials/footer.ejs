@@ -1,0 +1,12 @@
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-tag"><%= site.tagline %></div>
+      <div class="foot-nav">
+        <% site.nav.forEach(function(item){ %><a href="<%= item.href %>"><%= item.label %></a><% }); %>
+      </div>
+    </div>
+    <div class="foot-copy">&copy; <%= site.year %> Sujina Dahal. Building practical, inclusive and responsible solutions for citizens and communities.</div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>

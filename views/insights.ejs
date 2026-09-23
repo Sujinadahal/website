@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head') %>
+</head>
+<body>
+<%- include('partials/nav') %>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">INSIGHTS</div>
+    <h1>Ideas for a More Inclusive Digital Future</h1>
+    <p class="lede">I write about civic technology, digital inclusion, responsible AI, public-service access, youth leadership, research and community impact.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <ul class="post-list">
+      <% posts.forEach(function(p){ %>
+        <li><%= p.title %> <span><%= p.status %></span></li>
+      <% }); %>
+    </ul>
+    <p class="form-note" style="margin-top:24px;">Posts are served from <code>data/insights.json</code> — add a <code>content</code> field and a matching route/view per post when articles are ready to publish.</p>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>
