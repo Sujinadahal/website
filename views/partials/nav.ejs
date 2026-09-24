@@ -6,6 +6,6 @@
         <a href="<%= item.href %>" class="<%= site.currentPath === item.href ? 'active' : '' %>"><%= item.label %></a>
       <% }); %>
     </div>
-    <button class="navtoggle" id="navtoggle" aria-label="Toggle menu">☰</button>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false">☰</button>
   </nav>
 </header>

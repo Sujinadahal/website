@@ -8,7 +8,7 @@
 
 <section class="hero">
   <div class="wrap">
-    <div>
+    <div class="reveal">
       <div class="eyebrow">CIVIC TECHNOLOGY · RESEARCH · DIGITAL INCLUSION</div>
       <h1>Building Practical Solutions for People, Technology &amp; Public Services.</h1>
       <p class="lede">Sujina Dahal is a civic-technology entrepreneur, researcher and youth-development professional working across digital public services, responsible AI, research and community programmes. Through <strong>Prashasan Pro</strong>, she is making citizenship, passport and administrative information simpler for Nepali citizens to access.</p>
@@ -18,18 +18,25 @@
       </div>
       <div class="micro">Founder of Prashasan Pro — <a href="/work">visit the project →</a></div>
     </div>
-    <div class="hero-media">
+    <div class="hero-media reveal">
       <img src="/images/podium-speaking.jpg" alt="Sujina Dahal speaking at a podium during a formal programme">
       <div class="hero-tag">Founder, Prashasan Pro — simplifying citizenship &amp; passport information for Nepali citizens.</div>
     </div>
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>CIVIC TECHNOLOGY</span><span>YOUTH LEADERSHIP</span><span>DIGITAL INCLUSION</span><span>SDG COORDINATION</span><span>APPLIED RESEARCH</span><span>PUBLIC SERVICE</span>
+    <span>CIVIC TECHNOLOGY</span><span>YOUTH LEADERSHIP</span><span>DIGITAL INCLUSION</span><span>SDG COORDINATION</span><span>APPLIED RESEARCH</span><span>PUBLIC SERVICE</span>
+  </div>
+</div>
+
 <section class="alt">
   <div class="wrap">
-    <div class="num">Snapshot</div>
-    <div class="sec-head"><h2>Impact That Can Be Seen.</h2></div>
-    <div class="impact-grid">
+    <div class="num reveal">Snapshot</div>
+    <div class="sec-head reveal"><h2>Impact That Can Be Seen.</h2></div>
+    <div class="impact-grid reveal">
       <% impact.forEach(function(i){ %>
         <div class="impact-cell"><div class="fig"><%= i.figure %></div><div class="lbl"><%= i.label %></div></div>
       <% }); %>
@@ -42,12 +49,12 @@
 
 <section>
   <div class="wrap">
-    <div class="num">Where I Work</div>
-    <div class="sec-head">
+    <div class="num reveal">Where I Work</div>
+    <div class="sec-head reveal">
       <h2>Civic Technology · Policy · Youth Leadership</h2>
       <p class="lede">From Prashasan Pro to national digital-literacy training to SDG coordination across Gandaki Province — explore the full picture across the site.</p>
     </div>
-    <div class="cta-row">
+    <div class="cta-row reveal">
       <a href="/about" class="btn btn-ghost">About</a>
       <a href="/work" class="btn btn-ghost">Featured Work</a>
       <a href="/leadership" class="btn btn-ghost">Leadership</a>
